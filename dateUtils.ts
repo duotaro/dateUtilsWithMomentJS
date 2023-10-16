@@ -94,15 +94,15 @@ export function addHour(date:Moment, add:number, format:string) {
 /**
  * 曜日を取得します
  */
-export function getYear(date:Moment) {
+export function getYear(date:Moment | Date) {
     if(!date) {
-        return moment().format('MMM')
+        return moment().format('YYYY')
     }
-    return moment(date).format('MMM')
+    return moment(date).format('YYYY')
 };
 
 /**
- * 曜日を取得します
+ * 月を取得します
  */
 export function getMonth(date:Moment) {
     if(!date) {
